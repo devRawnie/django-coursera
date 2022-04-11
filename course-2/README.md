@@ -55,3 +55,28 @@
 - Each view should return an object of type `HTTPResponse`
 
 > django.utils.html.escape() escapes any html/js passed to it. This should be used whenever we accept user input
+
+## Templates
+- Made up of static HTML + Tags from Templating language (Django Templating language in case of Django)
+- naming convention for a template: `<app_name>/templates/<app_name>/template-name.html`
+
+### Django Template Language
+
+- Anything put inside the `{{ }}` is automatically escaped
+- To prevent escaping, pass `filter` tag like this: `{{ variable|filter }}`
+
+### Template Inheritance
+
+### Reversing URLs
+
+- Given a URL, to find its view we can name each url in the `urls.py`
+- Refer to those urls inside the `url` tag in DTL
+
+```py
+{% url 'app-name:url-name' %} # in urls.py
+
+django.urls.reverse('url-name') # in python
+```
+- Specify **app_name** parameter in urls.py and use it to refer to the urls in other applications with the same syntax as mentioned above
+- Can also use `namespace` argument in path() to refer to a url with that name instead of the app name
+
