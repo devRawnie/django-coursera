@@ -80,3 +80,16 @@ django.urls.reverse('url-name') # in python
 - Specify **app_name** parameter in urls.py and use it to refer to the urls in other applications with the same syntax as mentioned above
 - Can also use `namespace` argument in path() to refer to a url with that name instead of the app name
 
+
+## Object lifecycle
+- \_\_init__ : Constructor
+- \_\_del__  : Destructor
+
+> Convention over configuration
+
+## Django Generic Views
+- Hides all the boilerplate code for 
+  - fetching all objects of the model
+  - rendering the objects in a template
+
+`django.views.generic.ListView`
