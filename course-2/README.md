@@ -93,3 +93,27 @@ django.urls.reverse('url-name') # in python
   - rendering the objects in a template
 
 `django.views.generic.ListView`
+
+## CSRF Attack
+
+- Cross Site Request Forgery
+- Lets say the user is logged in on a real website via Session Cookie
+- The attacker will create a fake form, to post something else, and in the background the actual form is submitted to the legitimate website
+- The legitimate website accepts the form because of the cookie value
+
+### Defense
+
+- Choose a large random number and put it in session (CSRF Token)
+- The token is included in the form whenever the form is generated.
+- The site rejects the request if incoming CSRF Token does not match the session's CSRF Token
+- 
+
+> Page refresh re-runs the entire transaction again. The post request will be sent again on refresh. This is bad UX
+
+## POST-Redirect-GET
+
+- Never send HTML in the response of a POST Request
+- In response of a POST request, redirect the user to another page
+
+> Flash message pattern
+
