@@ -4,3 +4,5 @@
 
 ## [Course 2: Building Web Applications in Django](./course-2/README.md)
 
+## [Course 3: Django Features and Libraries](./course-3/README.md)
+
